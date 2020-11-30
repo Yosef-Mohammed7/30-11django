@@ -1,0 +1,178 @@
+{% load static %}
+
+<html lang="ar">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {% if title %}
+        <title>   CCSE UOH | {{title}}</title>
+        {% else %}
+        <title> CCSE UOH</title>
+        {% endif %}
+        <link rel="stylesheet" href="{% static 'blog/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'blog/css/main1.css' %}">
+        <link rel="stylesheet" href="{% static 'blog/css/freelancer.css' %}">
+        <link rel="stylesheet" href="{% static 'blog/css/main11.css' %}">
+		<link rel="shortcut icon" href="{% static 'blog/images/favicon.ico' %}"> 
+        <link rel="shortcut " href="{% static 'blog/images' %}">  
+        <link rel="shortcut icon" href="{% static 'blog/images/img/44.jpg' %}">   
+ 
+	
+	
+     </head>
+     <body>
+        <header>
+
+            <div id="preloder">
+                <div class="loader"></div>
+            </div>
+        
+            <nav class="nav-link.active nav-tabs navbar navbar-expand-lg bg-secondary text-uppercase  " id="mainNav">
+                <a class="navbar-brand" href="">
+                    <img class="imgme" src="{% static 'blog/images/img/44.jpg' %}">
+
+                    CCSE UOH </a>
+                <div class="container">
+                  <a class="navbar-brand js-scroll-trigger" href="/"><img src="" alt=""></a>
+                  <button class="navbar-toggler navbar-toggler-righ text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        
+                                         
+                  </button>
+         
+                  <div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+                        <li class="nav-item mx-0 mx-lg-1">
+                          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger    " href=" {% url 'index1' %} ">الرئيسية </a>
+                        </li>
+        
+        
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'courses' %}">الدورات </a>
+                        </li>
+        
+        
+                       <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'home' %}">المدونة </a>
+                        </li>
+                     
+                        <li class="nav-item mx-0 mx-lg-1">
+                          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="##">To Do </a>
+                      </li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'about' %}">تواصل معنا </a>
+                        </li>
+                    </ul>
+
+
+                    {% if user.is_authenticated %}
+                    <div class="d-flex p-2">
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item mx-0 mx-lg-1  "><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'new_post' %}">تدوينة جديدة</a></li>
+                            <li class="nav-item mx-0 mx-lg-1 "><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'profile' %}">الملف الشخصي</a></li>
+                            <li class="nav-item mx-0 mx-lg-1 "><a class=" nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'logout' %}">تسجيل خروج</a></li>
+                        </ul>
+                        {% else %}
+
+                        <ul class="navbar-nav ml-auto">
+                      <li class="nav-item mx-0 mx-lg-1 ">
+                        <a class="active nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger " href="{% url 'login' %}">تسجيل الدخول </a>
+                      </li>
+                      <li class="nav-item mx-0 mx-lg-1 ">
+                        <a class="active nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger " href="{% url 'register' %}">التسجيل</a>
+                      </li>
+                    </div>
+                    </ul>
+                    {% endif %}        
+                        
+                    </div>
+                  </div>
+                </div>
+              </nav>
+
+
+
+              {% block body %}
+
+              {% endblock body %}
+
+
+
+
+              
+	<footer class="bg-secondary">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md">
+					<div class="card-group mt-3 ">                          
+						
+						<!-- <div class="card-header  text-center border-bottom p-2 m-3">
+							<div class="card-header text-center border-bottom p-2 m-3"><h3>من أنا</h3></div>
+							<div class="card-body text-info">
+							  <h5 class="card-title">يوسف الشمري </h5>
+							  <p class="card-text">            
+								   طالب في جامعة حائل  كلية علوم وهندسة الحاسب تخصص هندسة البرمجيات هذي المدونة خاصة في المقالات التقنية 
+							</p>
+
+							</div>
+						  </div> -->
+
+						
+					   
+							 
+						
+
+
+						<div class="card m-3">
+							<h3 class="card-header  text-center border-bottom p-2 m-3">تطوير</h3>
+							<h4 class="card-body text-center">
+								
+								</ul>
+							</h4>
+						</div>
+						<div class="card m-3">
+							<h3 class="card-header  text-center border-bottom p-2 m-3"> للاخبار!! </h3>
+							<h4 class="card-body text-center">
+								<p class="card-text">            
+									<div class="widget-item">
+										<form class="footer-newslatter">
+											<p></p>
+											<input type="email" placeholder="E-mail">
+											<button class="site-btn">الاشتراك </button>
+										</form>
+									</div>                                 </p>
+							</h4>
+						</div>
+						<div class="card m-3">
+							<h3 class="card-header  text-center border-bottom p-2 m-3">وسائل التواصل الاجتماعي</h3>
+							<h4 class="card-body text-center">
+								<div class="widget-item">
+									<h4></h4>
+								
+								</div>
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+			<div class="row p-2">
+				<div class="col-md text-center">
+					<small class="text-light">&copy; جميع الحقوق محفوظة {% now 'Y' %}</small>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+<script src="{% static 'blog/js/jquery-3.3.1.slim.min.js' %}"></script>
+<script src="{% static 'blog/js/popper.min.js' %}"></script>
+<script src="{% static 'blog/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'blog/js/fontawesome-all.min.js' %}"></script>
+<script src="{% static 'blog/js/mixitup.min.js' %}"></script>
+<script src="{% static 'blog/js/circle-progress.min.js' %}"></script>
+<script src="{% static 'blog/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'blog/js/main.js' %}"></script>
+ </body>
+
+</html>  

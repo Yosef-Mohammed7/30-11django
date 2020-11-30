@@ -1,0 +1,328 @@
+{% load static %}
+
+<html lang="ar">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {% if title %}
+        <title>   CCSE UOH | {{title}}</title>
+        {% else %}
+        <title> CCSE UOH</title>
+        {% endif %}
+        <link rel="stylesheet" href="{% static 'blog/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'blog/css/main1.css' %}">
+        <link rel="stylesheet" href="{% static 'blog/css/freelancer.css' %}">
+        <link rel="stylesheet" href="{% static 'blog/css/main11.css' %}">
+		<link rel="shortcut icon" href="{% static 'blog/images/favicon.ico' %}"> 
+		<link rel="shortcut " href="{% static 'blog/images' %}">   
+  
+<!-- course
+		<link href="img/favicon.ico" rel="shortcut icon"/>
+
+		<link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="css/font-awesome.min.css"/>
+		<link rel="stylesheet" href="css/owl.carousel.css"/>
+		<link rel="stylesheet" href="css/style.css"/>
+		<link rel="stylesheet" href="c/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="c/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="c/css/owl.carousel.css"/>
+		<link rel="stylesheet" href="c/css/style.css"/>
+		<link rel="stylesheet" href="c/css/freelancer.css"/>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	 section -->
+	
+	
+     </head>
+     <body>
+        <header>
+
+            <div id="preloder">
+                <div class="loader"></div>
+            </div>
+        
+            <nav class=" nav-tabs navbar navbar-expand-lg bg-secondary text-uppercase " id="mainNav">
+                <a class="navbar-brand" href="">
+                            
+                    CCSE UOH </a>
+                <div class="container">
+                  <a class="navbar-brand js-scroll-trigger" href="/"><img src="" alt=""></a>
+                  <button class="navbar-toggler navbar-toggler-righ text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        
+                                         
+                  </button>
+         
+                  <div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+                        <li class="nav-item mx-0 mx-lg-1">
+                          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger    " href=" {% url 'index1' %} ">الرئيسية </a>
+                        </li>
+        
+        
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'courses' %}">الدورات </a>
+                        </li>
+        
+        
+                       <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'home' %}">المدونة </a>
+                        </li>
+        
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'about' %}">تواصل معنا </a>
+                        </li>
+                    </ul>
+
+
+                    {% if user.is_authenticated %}
+                    <div class="d-flex p-2">
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item mx-0 mx-lg-1  "><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'new_post' %}">تدوينة جديدة</a></li>
+                            <li class="nav-item mx-0 mx-lg-1 "><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'profile' %}">الملف الشخصي</a></li>
+                            <li class="nav-item mx-0 mx-lg-1 "><a class=" nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'logout' %}">تسجيل خروج</a></li>
+                        </ul>
+                        {% else %}
+
+                        <ul class="navbar-nav ml-auto">
+                      <li class="nav-item mx-0 mx-lg-1 ">
+                        <a class="active nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger " href="{% url 'login' %}">تسجيل الدخول </a>
+                      </li>
+                      <li class="nav-item mx-0 mx-lg-1 ">
+                        <a class="active nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger " href="{% url 'register' %}">التسجيل</a>
+                      </li>
+                    </div>
+                    </ul>
+                    {% endif %}        
+                        
+                    </div>
+                  </div>
+                </div>
+              </nav>
+
+
+
+	<section class="hero-section set-bg" data-setbg="img/bg.jpg">
+		<div class="container">
+			<div class="hero-text text-white ">
+				<h2>كورسات كلية علوم وهندسة الحاسب الآلي</h2>
+			</div>
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1">
+					
+				</div>
+			</div>
+		</div>
+	
+	 <!-- search section -->
+<br><br>br
+<section class="search-section ss-other-page">
+	<div class="container  p-5 mb-5">
+		<div class="search-warp">
+			<div class="section-title text-white">
+				<h2><span>ابحث عن دورتك </span></h2>
+			</div>
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1">
+					<!-- search form -->
+					<form class="course-search-form">
+						<input type="text" placeholder="Course">
+						<input type="text" class="last-m" placeholder="Category">
+						<button class="site-btn btn-dark">البحث عن الدورة </button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+</section>
+<!-- search section end -->
+
+
+
+	<!-- Hero section end -->
+
+
+	<!-- categories section -->
+	<section class="categories-section spad">
+		<div class="container">
+			<div class="section-title">
+				<h2>فئات الدورات لدينا</h2>
+			</div>
+			<div class="row">
+				<!-- categorie -->
+				<div class="col-lg-4 col-md-6">
+					<div class="categorie-item">
+						<div class="ci-thumb set-bg" data-setbg="img/categories/1.jpg"></div>
+						<div class="ci-text">
+							<h5>تقنية المعلومات </h5>
+							<p>انضم لهذه الدورة </p>
+							<span>120 Courses</span>
+						</div>
+					</div>
+				</div>
+				<!-- categorie -->
+				<div class="col-lg-4 col-md-6">
+					<div class="categorie-item">
+						<div class="ci-thumb set-bg" data-setbg="img/categories/2.jpg"></div>
+						<div class="ci-text">
+							<h5>تطوير المواقع</h5>
+							<p>انضم لهذه الدورة </p>
+							<span>70 Courses</span>
+						</div>
+					</div>
+				</div>
+				<!-- categorie -->
+				<div class="col-lg-4 col-md-6">
+					<div class="categorie-item">
+						<div class="ci-thumb set-bg" data-setbg="img/categories/3.jpg"></div>
+						<div class="ci-text">
+							<h5>التصوير</h5>
+							<p>انضم لهذه الدورة </p>
+							<span>55 Courses</span>
+						</div>
+					</div>
+				</div>
+				<!-- categorie -->
+				<div class="col-lg-4 col-md-6">
+					<div class="categorie-item">
+						<div class="ci-thumb set-bg" data-setbg="img/categories/4.jpg"></div>
+						<div class="ci-text">
+							<h5>التواصل الاجتماعي</h5>
+							<p>انضم لهذه الدورة </p>
+							<span>40 Courses</span>
+						</div>
+					</div>
+				</div>
+				<!-- categorie -->
+				<div class="col-lg-4 col-md-6">
+					<div class="categorie-item">
+						<div class="ci-thumb set-bg" data-setbg="img/categories/5.jpg"></div>
+						<div class="ci-text">
+							<h5>التصميم</h5>
+							<p>انضم لهذه الدورة </p>
+							<span>220 Courses</span>
+						</div>
+					</div>
+				</div>
+				<!-- categorie -->
+				<div class="col-lg-4 col-md-6">
+					<div class="categorie-item">
+						<div class="ci-thumb set-bg" data-setbg="img/categories/6.jpg"></div>
+						<div class="ci-text">
+							<h5>العملات الرقمية</h5>
+							<p>انضم لهذه الدورة </p>
+							<span>25 Courses</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- categories section end -->
+
+
+	<!-- banner section -->
+	<section class="banner-section spad">
+		<div class="container">
+			<div class="section-title mb-0 pb-2">
+				<h2>انضم ألينا الان !</h2>
+<p>في هذه المنصه نهدف الى تطوير المهارات لدى الطلاب وتدريبهم للسوق العمل</p>
+			</div>
+			<div class="text-center pt-5">
+				<a href="#" class="site-btn">سجل الان </a>
+			</div>
+		</div>
+	</section>
+
+	<!-- banner section end -->
+
+
+	<footer class="bg-secondary">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md">
+					<div class="card-group mt-3 ">                          
+						
+						<!-- <div class="card-header  text-center border-bottom p-2 m-3">
+							<div class="card-header text-center border-bottom p-2 m-3"><h3>من أنا</h3></div>
+							<div class="card-body text-info">
+							  <h5 class="card-title">يوسف الشمري </h5>
+							  <p class="card-text">            
+								   طالب في جامعة حائل  كلية علوم وهندسة الحاسب تخصص هندسة البرمجيات هذي المدونة خاصة في المقالات التقنية 
+							</p>
+
+							</div>
+						  </div> -->
+
+						
+					   
+							 
+						
+
+
+						<div class="card m-3">
+							<h3 class="card-header  text-center border-bottom p-2 m-3">تطوير</h3>
+							<h4 class="card-body text-center">
+								<h4>المجالات </h4>
+								<ul class="contact-list">
+									<li><a href="">--------</a></li>
+									<li><a href="">--------</a></li>
+									<li><a href="">--------</a></li>
+									<li><a href="">--------</a></li>
+									<li><a href="">--------</a></li>
+								</ul>
+							</h4>
+						</div>
+						<div class="card m-3">
+							<h3 class="card-header  text-center border-bottom p-2 m-3"> للاخبار!! </h3>
+							<h4 class="card-body text-center">
+								<p class="card-text">            
+									<div class="widget-item">
+										<form class="footer-newslatter">
+											<p>اشترك بالاخبار</p>
+											<input type="email" placeholder="E-mail">
+											<button class="site-btn">الاشتراك </button>
+										</form>
+									</div>                                 </p>
+							</h4>
+						</div>
+						<div class="card m-3">
+							<h3 class="card-header  text-center border-bottom p-2 m-3">وسائل التواصل الاجتماعي</h3>
+							<h4 class="card-body text-center">
+								<div class="widget-item">
+									<h4></h4>
+									<ul>
+										<li><a href="">--------</a></li>
+										<li><a href="">--------</a></li>
+										<li><a href="">--------</a></li>
+										<li><a href="">--------</a></li>
+										<li><a href="">--------</a></li>
+									</ul>
+								</div>
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+			<div class="row p-2">
+				<div class="col-md text-center">
+					<small class="text-light">&copy; جميع الحقوق محفوظة {% now 'Y' %}</small>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+<script src="{% static 'blog/js/jquery-3.3.1.slim.min.js' %}"></script>
+<script src="{% static 'blog/js/popper.min.js' %}"></script>
+<script src="{% static 'blog/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'blog/js/fontawesome-all.min.js' %}"></script>
+<script src="{% static 'blog/js/mixitup.min.js' %}"></script>
+<script src="{% static 'blog/js/circle-progress.min.js' %}"></script>
+<script src="{% static 'blog/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'blog/js/main.js' %}"></script>
+ </body>
+
+</html>  
